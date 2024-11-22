@@ -64,10 +64,6 @@ FROM
     today t FULL OUTER JOIN yesterday y ON t.actorid = y.actorid;
 
 
--- Testing query
--- select * from actors where actor = '50 Cent'
-
-
 
 -- Week1 Q3 | DDL for actors_history_scd
 CREATE TABLE actors_history_scd (
@@ -76,7 +72,9 @@ CREATE TABLE actors_history_scd (
     films films[],
     quality_class quality_class,
     is_active BOOLEAN,
-    current_year INTEGER
-    start_date 
-    end_date
+    start_season INTEGER, 
+    end_season INTEGER,
+    asofseason INTEGER
 )
+
+select * from actors

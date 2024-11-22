@@ -91,7 +91,7 @@ FROM windowed w
 JOIN static s
     ON w.player_name = s.player_name;
 
-DROP TABLE players_scd;
+-- DROP TABLE players_scd;
 CREATE TABLE players_scd (
     player_name TEXT,
     scoring_class scoring_class,
