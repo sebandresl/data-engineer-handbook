@@ -151,8 +151,6 @@ CREATE TYPE scd_type as (
     end_season INTEGER
 )
 
-
-
 WITH last_season_scd AS (
     select * from players_scd
     WHERE current_season = 2021
@@ -221,6 +219,7 @@ WITH last_season_scd AS (
     new_records as (
         select 
             ts.player_name,
+            ts.scoring_class,
             ts.is_active,
             ts.current_season as start_season,
             ts.current_season as end_season   
@@ -231,6 +230,10 @@ WITH last_season_scd AS (
     )
 
 SELECT * from historical_scd
+
+UNION ALL
+
+select * from unchanged_records
 
 UNION ALL
 
