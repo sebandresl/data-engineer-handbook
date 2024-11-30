@@ -48,7 +48,9 @@ SELECT
     cardinality(metric_array),
     count(1)
  FROM array_metrics
- GROUP BY 1
+ GROUP BY 1;
+
+ select * FROM array_metrics
 
 WITH
 agg AS (
