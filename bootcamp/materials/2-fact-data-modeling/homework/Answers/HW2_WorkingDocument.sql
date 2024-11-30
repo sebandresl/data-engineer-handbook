@@ -98,9 +98,6 @@ SELECT
     user_id,
     browser_type,
     CAST(CAST(sum(placeholder_int_value) AS BIGINT) AS BIT(32))
-    -- BIT_COUNT(CAST(CAST(sum(placeholder_int_value) AS BIGINT) AS BIT(32))) > 0 as dim_is_monthly_active,
-    -- BIT_COUNT(CAST('111111100000000000000000000000' AS BIT(32)) & 
-    --     CAST(CAST(sum(placeholder_int_value) AS BIGINT) AS BIT(32))) > 0 as dim_is_weekly_active
 FROM place_holder_int
 GROUP BY user_id, browser_type
 
